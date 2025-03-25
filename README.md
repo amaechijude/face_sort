@@ -18,13 +18,13 @@ Face Sort is a Python application designed to analyze images within a directory 
 
 Before running Face Sort, ensure you have the following installed:
 
-*   **Python 3.6+:** The application is written in Python and requires a compatible version (3.6 or later).
+*   **Python 3.12+:** The application is written in Python and requires a compatible version (3.6 or later).
 *   **Dependencies:** The required Python libraries are listed in the `requirements.txt` file. These include:
     *   **face_recognition:** The core library for face detection and encoding.
     *   **Pillow (PIL):** For image handling and manipulation.
     *   **NumPy:** For numerical operations, particularly with face encodings (vectors).
-    *   **dlib** A modern C++ toolkit containing machine learning algorithms and tools.
-    *   **Cmake** CMake is used to build and manage C++ project like **dlib** above
+    *   **dlib:** A modern C++ toolkit containing machine learning algorithms and tools.
+    *   **Cmake:** CMake is used to build and manage C++ project like **dlib** above
 
 ## Installation
 
@@ -65,12 +65,10 @@ Before running Face Sort, ensure you have the following installed:
 face_sort/ 
     ├── main.py 
     ├── requirements.txt 
-    ├── base.jpg # Your base image 
-    
-    └── images/ # Folder containing images to compare 
+    ├── base.jpg
+    └── images/
         ├── image1.jpg
-        ├── image2.png 
-        
+        ├── image2.png
         ├── subfolder/ 
             ├── image3.jpg
             ├── image4.webp
