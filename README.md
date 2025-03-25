@@ -23,13 +23,15 @@ Before running Face Sort, ensure you have the following installed:
     *   **face_recognition:** The core library for face detection and encoding.
     *   **Pillow (PIL):** For image handling and manipulation.
     *   **NumPy:** For numerical operations, particularly with face encodings (vectors).
+    *   **dlib** A modern C++ toolkit containing machine learning algorithms and tools.
+    *   **Cmake** CMake is used to build and manage C++ project like **dlib** above
 
 ## Installation
 
 1.  **Clone the repository (if applicable):** If you have this code in a Git repository, clone it to your local machine:
 
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/amaechijude/face_sort
     cd face_sort
     ```
 
@@ -60,4 +62,15 @@ Before running Face Sort, ensure you have the following installed:
     *   The output will indicate whether each image in the `images` folder contains a face similar to the one in `base.jpg`.
 
 ## Example Directory Structure
-face_sort/ ├── main.py ├── requirements.txt ├── base.jpg # Your base image └── images/ # Folder containing images to compare ├── image1.jpg ├── image2.png ├── subfolder/ │ └── image3.jpeg └── image4.webp
+face_sort/ 
+    ├── main.py 
+    ├── requirements.txt 
+    ├── base.jpg # Your base image 
+    
+    └── images/ # Folder containing images to compare 
+        ├── image1.jpg
+        ├── image2.png 
+        
+        ├── subfolder/ 
+            ├── image3.jpg
+            ├── image4.webp

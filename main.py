@@ -72,12 +72,10 @@ def traverse_image_directory_and_generate_encodings(directory_path: str, skip_fo
         Dictionary with int as key and image encodings as values.
     """
     image_encodings = {}
-    print(f"Traversing directory: {directory_path}")
-    print("Generating image encodings...")
     i = 1
     for root, dirs, files in os.walk(directory_path):
         dirs[:] = [d for d in dirs if d not in skip_folder]
-        print(f"Traversing directory: {root}")
+        print(f"Traversing directory: {dirs}")
         for file in files:
             image_path = os.path.join(root, file)
             if not is_valid_image_file(image_path):
@@ -85,8 +83,6 @@ def traverse_image_directory_and_generate_encodings(directory_path: str, skip_fo
             encodings = generate_image_encodings(image_path)
             if len(encodings) > 0:
                 image_encodings[i] = encodings
-                print("." * i)
-                i =+ 1
     print("Done")
     return image_encodings
 
@@ -94,9 +90,14 @@ def traverse_image_directory_and_generate_encodings(directory_path: str, skip_fo
 def main(base_encoding: list[float], target_encoding: dict) -> None:
     for k, v in target_encoding.items():
         if compare_face_encodings(base_encoding, v):
+            # Make any manipulation for similar image
+            # Like delete, move, copy, send over network, etc
             print(f"Face {k} is similar to the base image.")
         else:
             print(f"Face {k} is not similar to the base image.")
+            # Manipulate non similar images
+
+    return
         
 
     
